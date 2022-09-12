@@ -1,0 +1,10 @@
+REM The classic rick roll
+REM Uses the 10 hour version for maximum annoyance
+DEFAULT_DELAY 400
+REM Open video:
+CTRL ALT T
+STRING xdg-open https://www.youtube.com/watch?v=xm3YgoEiEDc
+ENTER
+REM Fullscren video:
+DELAY 1000
+STRING f
