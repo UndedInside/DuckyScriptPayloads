@@ -2,7 +2,7 @@ REM This is BadUSB demo script for linux
 
 REM Open terminal window
 DELAY 1000
-GUI t
+ALT T
 DELAY 1000
 STRING cd ~
 ENTER
