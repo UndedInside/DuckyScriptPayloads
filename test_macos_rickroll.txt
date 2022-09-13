@@ -1,0 +1,11 @@
+REM The classic rick roll
+DEFAULT_DELAY 500
+REM Open video:
+GUI SPACE
+STRING terminal
+ENTER
+STRING open https://vimeo.com/375468729
+ENTER
+DELAY 700
+STRING f
+SPACE
