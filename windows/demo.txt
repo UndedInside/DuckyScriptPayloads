@@ -82,3 +82,5 @@ STRING More information about script synax can be found here:
 ENTER
 STRING https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript
 ENTER
+STRING JUST A TEST CODE TEST CODE 1
+ENTER
