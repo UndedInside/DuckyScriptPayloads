@@ -1,10 +1,15 @@
-REM The classic rick roll
+REM Title: Linux Rickroll
+REM Author: UndedInside
+REM Description: The iconic rick roll
+REM Uses the 10 hour version for maximum annoyance
+
+
 DEFAULT_DELAY 700
 REM Open video:
 ALT T
 STRING xdg-open https://vimeo.com/375468729
 ENTER
-REM Fullscren video and play it:
+
+REM Fullscren video:
 DELAY 5000
 STRING f
-SPACE
