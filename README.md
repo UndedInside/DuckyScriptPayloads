@@ -1,4 +1,4 @@
-# Ducky Scripts
+# Ducky Script Payloads
 This is a collection of scripts that I have written in Ducky Script to be used in bad USBs.
 
 ## How is this organised?
