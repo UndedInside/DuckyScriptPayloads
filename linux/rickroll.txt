@@ -7,8 +7,7 @@ REM Uses the 10 hour version for maximum annoyance
 DEFAULT_DELAY 700
 REM Open video:
 ALT T
-STRING xdg-open https://vimeo.com/375468729
-ENTER
+STRINGLN xdg-open https://vimeo.com/375468729
 
 REM Fullscren video:
 DELAY 5000
